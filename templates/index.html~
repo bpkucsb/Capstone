@@ -1,0 +1,23 @@
+<!doctype html>
+<title>Sensor data and reviews comparison</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<div class=page>
+  <h1>User Input</h1>
+  <div class=metanav>
+
+    <h4>
+      Please click one of the checkboxes below
+    </h4>
+
+    The objective of this project is to compare the failure rates obtained from sensors on computer hard drive to the failure rate a customer would perceive just from looking at the onine reviews of the hard drive.
+    <br>
+    For now we just calculate the failure rate of certain hard drives from the  sensor data
+    
+    <form action="/plot" method="GET">
+      Hitachi <input type="checkbox" name="model" value="Hitachi"><br>
+      Seagate <input type="checkbox" name="model" value="ST"><br>
+      Western Digital <input type="checkbox" name="model" value="WDC"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
